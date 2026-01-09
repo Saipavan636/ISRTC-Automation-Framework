@@ -1,145 +1,27 @@
-# 🚀 ISRTC Automation Framework
+ISRTC Automation Framework
 
-A complete **Java + Selenium + TestNG** automation framework designed for UI test automation.  
-This project follows **Page Object Model (POM)**, supports **parallel execution**, **retry logic**, **screenshot capture**, and integrates with **Allure / Extent reports**.
+Enterprise-level Java Selenium automation framework designed for end-to-end web application testing.
+Built using TestNG and Maven with Page Object Model (POM) for high scalability, reusability, and maintainability.
 
----
+Tech Stack
+Java | Selenium WebDriver | TestNG | Maven | POM | Extent Reports | Allure Reports | Git | Jenkins
 
-## 📌 Tech Stack
-- Java 17  
-- Selenium WebDriver 4.x  
-- TestNG  
-- Maven  
-- Page Object Model (POM)  
-- Extent Reports  
-- Allure Reports  
-- ThreadLocal WebDriver  
+Core Capabilities
+Robust Page Object Model based framework design
+Thread-safe WebDriver implementation using ThreadLocal
+Parallel and cross-browser test execution
+Sanity and Regression suite management using TestNG
+Automatic retry mechanism for flaky test cases
+Screenshot capture and detailed reporting on test failures
+Maven-based dependency and build management
+Continuous Integration support with Jenkins pipeline
 
----
-
-## 📁 Project Structure
-```
-ISRTC-Automation-Framework
-│
-├── src
-│   ├── main
-│   │   ├── java
-│   │   ├── resources
-│   ├── test
-│       ├── java
-│       ├── resources
-│
-├── screenshots/
-├── extent-report/
-│
-├── testng.xml
-├── pom.xml
-└── README.md
-```
-
----
-
-## 🚀 Features
-✔ POM-based automation  
-✔ Thread-safe WebDriver  
-✔ Automatic screenshots on failure  
-✔ TestNG Listeners  
-✔ Retry failed tests  
-✔ Parallel execution  
-✔ TestNG Groups (sanity, regression)  
-✔ Extent / Allure Reporting  
-
----
-
-## 🧪 How to Run Tests
-### Run full suite
-```bash
+Execution
+git clone https://github.com/saipavan-sdet/ISRTC-Automation-Framework.git
 mvn clean test
-```
 
-### Run group (example: regression)
-```bash
-mvn clean test -Dgroups=regression
-```
+Reporting
+Extent HTML report and Allure report generation after execution
 
----
-
-## 📄 TestNG Suite (testng.xml)
-```xml
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="ISRTC Suite" parallel="false">
-
-	<listeners>
-		<listener class-name="com.isrtc.listeners.TestListener" />
-	</listeners>
-
-
-	<test name="Sanity Tests">
-		<groups>
-			<run>
-				<include name="sanity" />
-			</run>
-		</groups>
-		<classes>
-			<class name="com.isrtc.tests.TC001_SearchWithValidData" />
-			<class name="com.isrtc.tests.TC002_BoardingAndDropping_Selection" />
-			<class name="com.isrtc.tests.TC003_ContactDetails_ValidData" />
-		</classes>
-	</test>
-
-	<test name="Regression Tests">
-		<groups>
-			<run>
-				<include name="regression" />
-			</run>
-		</groups>
-		<classes>
-			<class name="com.isrtc.tests.TC004_CompleteFlow_OneWayBooking" />
-		</classes>
-	</test>
-
-</suite>
-
-```
-
----
-
-## 📸 Screenshots
-Failure screenshots will appear inside:
-
-```
-/screenshots/
-```
-
----
-
-## 📊 Reports
-
-### Extent Report
-```
-/extent-report/AutomationReport.html
-```
-
----
-
-## 🏆 Badges
-
-```
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Selenium](https://img.shields.io/badge/Selenium-Automation-green)
-![TestNG](https://img.shields.io/badge/TestNG-Testing-orange)
-![Maven](https://img.shields.io/badge/Maven-Build-red)
-```
-
----
-
-## 🏗 Project Description for Portfolio
-
-This framework is built using **Java, Selenium, TestNG, Maven**, and follows the **POM design pattern**.  
-It supports:
-- Parallel execution using ThreadLocal  
-- Screenshot capture on failures  
-- Retry mechanism for flaky tests  
-- Beautiful Extent reports  
-- Well-structured TestNG suites with groups  
-
+Author
+Emmadi Sai Pavan | SDET | Automation Engineer
